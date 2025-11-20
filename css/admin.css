@@ -162,4 +162,65 @@
     background: linear-gradient(135deg, var(--barca-yellow) 0%, #FFD700 100%) !important;
     color: var(--barca-blue);
     transform: translateY(-2px);
+
+}
+/* Estilos para la tabla de posiciones en admin */
+.standings-info {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    border-left: 4px solid var(--barca-yellow);
+}
+
+.standings-info h4 {
+    color: var(--barca-yellow);
+    margin: 0 0 0.5rem 0;
+}
+
+.standings-info p {
+    margin: 0.2rem 0;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.standings-table-container {
+    overflow-x: auto;
+}
+
+.standings-table {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.standings-table th {
+    background: linear-gradient(135deg, var(--barca-red), #8B0000);
+    color: white;
+    padding: 0.8rem;
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+.standings-table td {
+    padding: 0.6rem;
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.standings-table tr.highlight {
+    background: linear-gradient(135deg, rgba(237, 187, 0, 0.2), rgba(165, 0, 68, 0.1));
+    font-weight: bold;
+}
+
+.standings-table tr.highlight td {
+    color: var(--barca-yellow);
+}
+
+.no-data-message {
+    text-align: center;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    border: 2px dashed rgba(237, 187, 0, 0.3);
 }
