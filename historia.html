@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Historia - FC Barcelona</title>
+	<link rel="stylesheet" href="css/general.css">
+    <link rel="stylesheet" href="css/mobile.css">
+	<style>
+
+		#historia-hero p { font-size: 1.15rem; line-height: 1.6; color: var(--light-gray); }
+		.timeline { display: grid; gap: 1rem; }
+		.valor-list { display: grid; gap: 0.6rem; }
+	</style>
+</head>
+<body>
+<div id="superior">
+	<div id="encabezado">
+		<div id="logo">
+			<h1>FC Barcelona</h1>
+		</div>
+
+		<button class="mobile-menu-toggle" aria-label="Menú">
+			<span></span>
+			<span></span>
+			<span></span>
+		</button>
+        
+		<nav>
+			<ul>
+				<li><a href="index.html" id="inicio">Inicio</a></li>
+				<li><a href="noticias.html" id="noticias">Noticias</a></li>
+				<li><a href="plantilla.html" id="plantilla">Plantilla</a></li>
+				<li><a href="calendario.html" id="calendario">Calendario</a></li>
+				<li><a href="historia.html" id="historia">Historia</a></li>
+			</ul>
+		</nav>
+        
+		<div id="imgDesc">
+			
+			<div id="description" class="" style="margin-top:1.5rem;">
+				<p><strong>"Més que un club"</strong> – Más que un club: la historia del FC Barcelona es la de una entidad deportiva con un papel social y cultural profundo, nacida en 1899 y forjada por futbolistas, directivos y aficionados de todo el mundo.</p>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="principal">
+	<section id="contenido">
+		<div id="galeria">
+			<h2 class="categoria-titulo">Historia del FC Barcelona</h2>
+
+			<div class="hist-grid">
+			<!-- Fundadores -->
+			<div class="plan hist-section hist-left">
+				<div class="hist-block-image">
+					<img src="img/fundadores.jpg" alt="fundadores">
+				</div>
+				<h3 style="color:var(--barca-yellow);">Fundación y fundadores</h3>
+				<div id="historia-hero">
+					<p><strong>Fecha de fundación:</strong> 29 de noviembre de 1899.</p>
+					<p>El FC Barcelona nació por iniciativa de Joan Gamper (Hans Gamper), un entusiasta suizo del fútbol que publicó un anuncio en 1899 buscando jugadores para formar un nuevo club en Barcelona. La primera junta y plantilla incluyeron jóvenes de distintas nacionalidades, lo que marcó desde el inicio la vocación internacional del club.</p>
+					<p>Gamper no sólo fue jugador sino también presidente en varias etapas, promoviendo la consolidación del club. Durante las primeras décadas, dirigentes y socios trabajaron para garantizar la supervivencia y el crecimiento del equipo: construcción de su primer campo, participación en competiciones regionales y la integración en la vida ciudadana de Barcelona.</p>
+					<p>El espíritu fundacional combinó afición por el deporte, apertura internacional y un vínculo cada vez más estrecho con la sociedad catalana, elementos que han definido la identidad del club a lo largo del tiempo.</p>
+				</div>
+			</div>
+
+			<!-- Logros -->
+			<div class="plan hist-section hist-center">
+				<div class="hist-block-image">
+					<img src="img/trofeos.jpg" alt="trofeos">
+				</div>
+				<h3 style="color:var(--barca-yellow);">Logros y hitos</h3>
+				<div class="timeline">
+					<p><strong>Palmarés y temporadas destacadas:</strong> A lo largo de su historia el FC Barcelona ha conseguido numerosos títulos nacionales e internacionales. Entre los hitos más recordados figuran las victorias en la Copa de Europa/UEFA Champions League en ediciones históricas, las temporadas de dominio liguero y las múltiples Copas del Rey que consolidaron su palmarés.</p>
+					<p><strong>Épocas memorables:</strong> Desde las décadas fundacionales con éxitos regionales hasta las eras modernas, el club ha vivido etapas doradas con planteamientos tácticos innovadores, generaciones de jugadores surgidos de La Masia y entrenadores que dejaron huella en la historia del fútbol.</p>
+					<p><strong>Contribución al fútbol:</strong> El Barça se ha reconocido por su estilo de juego ofensivo y asociativo, que ha influido en la manera de entender el fútbol en todo el mundo. Sus éxitos deportivos han ido acompañados de un crecimiento institucional y una expansión internacional de la marca.</p>
+				</div>
+			</div>
+
+			<!-- Valores -->
+			<div class="plan hist-section hist-right">
+				<div class="hist-block-image">
+					<img src="img/valores.png" alt="valores">
+				</div>
+				<h3 style="color:var(--barca-yellow);">Valores y compromiso</h3>
+				<div class="valor-list">
+					<p><strong>"Més que un club"</strong> – El lema resume la vocación del FC Barcelona de ser algo más que una entidad deportiva: un referente social, cultural y educativo en su entorno y más allá.</p>
+					<p><strong>La Masia y formación:</strong> La academia del club ha formado generaciones de futbolistas que destacaron tanto por su calidad técnica como por su educación. La apuesta por la cantera sigue siendo uno de los pilares del club.</p>
+					<p><strong>Compromiso social y comunitario:</strong> El club impulsa proyectos de carácter social, educativo y deportivo para fomentar la inclusión y el desarrollo personal a través del fútbol.</p>
+					<p><strong>Ética deportiva:</strong> Respeto, juego limpio y responsabilidad son valores que se intentan transmitir desde todas las áreas del club.</p>
+				</div>
+			</div>
+
+		</div>
+	</section>
+</div>
+
+<footer>
+	<p>FC Barcelona &copy; 2025 - Todos los derechos reservados</p>
+</footer>
+
+<div class="menu-overlay"></div>
+
+<script>
+const menuToggle = document.querySelector('.mobile-menu-toggle');
+const nav = document.querySelector('#encabezado > nav');
+const overlay = document.querySelector('.menu-overlay');
+
+if (menuToggle && nav) {
+	menuToggle.addEventListener('click', () => {
+		menuToggle.classList.toggle('active');
+		nav.classList.toggle('active');
+		overlay.classList.toggle('active');
+	});
+	
+	overlay.addEventListener('click', () => {
+		menuToggle.classList.remove('active');
+		nav.classList.remove('active');
+		overlay.classList.remove('active');
+	});
+
+	nav.querySelectorAll('a').forEach(link => {
+		link.addEventListener('click', () => {
+			menuToggle.classList.remove('active');
+			nav.classList.remove('active');
+			overlay.classList.remove('active');
+		});
+	});
+}
+</script>
+
+</body>
+</html>

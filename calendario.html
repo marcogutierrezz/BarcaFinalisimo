@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Calendario – FC Barcelona</title>
+  
+  <!-- estilos -->
+  <link rel="stylesheet" href="css/general.css">
+  <link rel="stylesheet" href="css/calendario.css">
+  <link rel="stylesheet" href="css/mobile.css">
+</head>
+<body>
+
+  <div id="superior">
+    <div id="encabezado">
+      <div id="logo">
+        <h1>FC Barcelona</h1>
+      </div>
+
+      <button class="mobile-menu-toggle" aria-label="Abrir menú">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav>
+        <ul>
+          <li><a href="index.html" id="inicio">Inicio</a></li>
+          <li><a href="noticias.html" id="noticias">Noticias</a></li>
+          <li><a href="plantilla.html" id="plantilla">Plantilla</a></li>
+          <li><a href="calendario.html" id="calendario">Calendario</a></li>
+          <li><a href="historia.html" id="historia">Historia</a></li>
+        </ul>
+      </nav>
+
+      <div id="imgDesc" class="calendario-style">
+        <div id="description" class="calendario-style">
+          <p>¡Bienvenido a la sección de calendario del FC Barcelona! Aquí encontrarás todos los partidos, resultados actualizados, tablas de posiciones de LaLiga y Champions League, y los próximos encuentros del equipo. ¡No te pierdas ningún detalle de la temporada culé!</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="menu-overlay"></div>
+
+  <main id="contenido-principal" class="container">
+    <h1 class="title">Calendario – FC Barcelona</h1>
+
+    <!-- TABS -->
+    <div class="tabs-container">
+      <div class="tabs-nav">
+        <button class="tab-button active" data-tab="laliga">Tabla LaLiga</button>
+        <button class="tab-button" data-tab="proximos">Próximos</button>
+        <button class="tab-button" data-tab="ucl">Champions</button>
+      </div>
+
+      <!-- TAB 1: Tabla LaLiga -->
+      <div class="tab-content active" id="laliga">
+        <section class="panel" aria-labelledby="laliga-tabla">
+          <h2 id="laliga-tabla" class="subtitle subtitle-main">Tabla de LaLiga</h2>
+
+          <table class="standings-table">
+            <thead>
+              <tr>
+                <th>Pos</th>
+                <th>Club</th>
+                <th>PJ</th>
+                <th>G</th>
+                <th>E</th>
+                <th>P</th>
+                <th>GF</th>
+                <th>GC</th>
+                <th>DG</th>
+                <th>Pts</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>1</td><td>Real Madrid</td><td>12</td><td>10</td><td>1</td><td>1</td><td>26</td><td>10</td><td>+16</td><td>31</td></tr>
+              <tr class="highlight"><td>2</td><td>FC Barcelona</td><td>12</td><td>9</td><td>1</td><td>2</td><td>31</td><td>17</td><td>+14</td><td>28</td></tr>
+              <tr><td>3</td><td>Villarreal</td><td>12</td><td>8</td><td>2</td><td>2</td><td>24</td><td>16</td><td>+8</td><td>26</td></tr>
+              <tr><td>4</td><td>Atlético Madrid</td><td>12</td><td>7</td><td>4</td><td>1</td><td>23</td><td>13</td><td>+10</td><td>25</td></tr>
+              <tr><td>5</td><td>Real Betis</td><td>12</td><td>5</td><td>5</td><td>2</td><td>19</td><td>13</td><td>+6</td><td>20</td></tr>
+              <tr><td>6</td><td>RCD Espanyol</td><td>12</td><td>5</td><td>3</td><td>4</td><td>15</td><td>15</td><td>0</td><td>18</td></tr>
+              <tr><td>7</td><td>Athletic Club</td><td>12</td><td>5</td><td>2</td><td>5</td><td>16</td><td>17</td><td>-1</td><td>17</td></tr>
+              <tr><td>8</td><td>Getafe</td><td>12</td><td>5</td><td>2</td><td>5</td><td>12</td><td>19</td><td>-7</td><td>17</td></tr>
+              <tr><td>9</td><td>Sevilla</td><td>12</td><td>5</td><td>1</td><td>6</td><td>16</td><td>17</td><td>-1</td><td>16</td></tr>
+              <tr><td>10</td><td>Alavés</td><td>12</td><td>4</td><td>3</td><td>5</td><td>11</td><td>11</td><td>0</td><td>15</td></tr>
+              <tr><td>11</td><td>Elche C.F.</td><td>12</td><td>3</td><td>4</td><td>5</td><td>11</td><td>15</td><td>-4</td><td>13</td></tr>
+              <tr><td>12</td><td>Rayo Vallecano</td><td>12</td><td>3</td><td>4</td><td>5</td><td>12</td><td>20</td><td>-8</td><td>13</td></tr>
+              <tr><td>13</td><td>Celta de Vigo</td><td>12</td><td>3</td><td>3</td><td>6</td><td>13</td><td>16</td><td>-3</td><td>12</td></tr>
+              <tr><td>14</td><td>Real Sociedad</td><td>12</td><td>3</td><td>4</td><td>5</td><td>14</td><td>23</td><td>-9</td><td>13</td></tr>
+              <tr><td>15</td><td>RCD Mallorca</td><td>12</td><td>3</td><td>3</td><td>6</td><td>12</td><td>18</td><td>-6</td><td>12</td></tr>
+              <tr><td>16</td><td>Osasuna</td><td>12</td><td>3</td><td>2</td><td>7</td><td>13</td><td>26</td><td>-13</td><td>11</td></tr>
+              <tr><td>17</td><td>Valencia C.F.</td><td>12</td><td>2</td><td>4</td><td>6</td><td>11</td><td>20</td><td>-9</td><td>10</td></tr>
+              <tr><td>18</td><td>Girona</td><td>12</td><td>2</td><td>3</td><td>7</td><td>11</td><td>26</td><td>-15</td><td>9</td></tr>
+              <tr><td>19</td><td>Levante</td><td>12</td><td>2</td><td>3</td><td>7</td><td>13</td><td>27</td><td>-14</td><td>9</td></tr>
+              <tr><td>20</td><td>Real Oviedo</td><td>12</td><td>2</td><td>2</td><td>8</td><td>10</td><td>23</td><td>-13</td><td>8</td></tr>
+            </tbody>
+          </table>
+        </section>
+      </div>
+
+      <!-- TAB 2: Próximos (lista + calendario) -->
+      <div class="tab-content" id="proximos">
+        <section class="panel" aria-labelledby="proximos-title">
+          <h2 id="proximos-title" class="subtitle subtitle-main">
+            Próximos encuentros del FC BARCELONA
+          </h2>
+
+          <!-- Lista de próximos partidos -->
+          <div class="upcoming-matches">
+            <div class="upcoming-match-item">
+              <div class="date">Sáb 22/11 · 9:15 a.m.</div>
+              <div class="teams">
+                <strong>FC Barcelona</strong> vs Athletic Club
+              </div>
+              <div class="competition">La Liga</div>
+            </div>
+
+            <div class="upcoming-match-item">
+              <div class="date">Mar 25/11 · 2:00 p.m.</div>
+              <div class="teams">
+                Chelsea vs <strong>FC Barcelona</strong>
+              </div>
+              <div class="competition">UEFA Champions League</div>
+            </div>
+
+            <div class="upcoming-match-item">
+              <div class="date">Sáb 29/11 · 9:15 a.m.</div>
+              <div class="teams">
+                <strong>FC Barcelona</strong> vs Alavés
+              </div>
+              <div class="competition">La Liga</div>
+            </div>
+
+            <div class="upcoming-match-item">
+              <div class="date">Mar 02/12 · 2:00 p.m.</div>
+              <div class="teams">
+                <strong>FC Barcelona</strong> vs Atlético Madrid
+              </div>
+              <div class="competition">La Liga</div>
+            </div>
+
+            <div class="upcoming-match-item">
+              <div class="date">Sáb 06/12 · 11:30 a.m.</div>
+              <div class="teams">
+                Real Betis vs <strong>FC Barcelona</strong>
+              </div>
+              <div class="competition">La Liga</div>
+            </div>
+          </div>
+
+          <!-- Calendario interactivo -->
+          <h3 class="subtitle" style="margin-top:2rem;">Calendario interactivo</h3>
+          <p class="paragraph-info">
+            Haz clic en los días marcados para ver la información del partido del FC Barcelona.
+          </p>
+
+          <div class="calendar-controls">
+            <button id="prevMonth">&lt;</button>
+            <span id="monthLabel"></span>
+            <button id="nextMonth">&gt;</button>
+          </div>
+
+          <div id="calendarGrid" class="calendar-grid"></div>
+
+          <div id="matchInfo" class="panel match-info-panel">
+            <h3 class="subtitle">Detalles del partido</h3>
+            <p>Selecciona un día con ⚽ en el calendario para ver la información.</p>
+          </div>
+        </section>
+      </div>
+
+      <!-- TAB 3: Champions (solo tabla) -->
+      <div class="tab-content" id="ucl">
+        <section class="panel" aria-labelledby="ucl-tabla">
+          <h2 id="ucl-tabla" class="subtitle subtitle-main">
+            UEFA Champions League – Tabla general
+          </h2>
+
+          <table class="standings-table">
+            <thead>
+              <tr>
+                <th>Pos</th>
+                <th>Club</th>
+                <th>PJ</th>
+                <th>G</th>
+                <th>E</th>
+                <th>P</th>
+                <th>GF</th>
+                <th>GC</th>
+                <th>DG</th>
+                <th>Pts</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>1</td><td>Bayern</td><td>4</td><td>4</td><td>0</td><td>0</td><td>14</td><td>3</td><td>+11</td><td>12</td></tr>
+              <tr><td>2</td><td>Arsenal</td><td>4</td><td>4</td><td>0</td><td>0</td><td>11</td><td>0</td><td>+11</td><td>12</td></tr>
+              <tr><td>3</td><td>Inter</td><td>4</td><td>4</td><td>0</td><td>0</td><td>11</td><td>1</td><td>+10</td><td>12</td></tr>
+              <tr><td>4</td><td>Manchester City</td><td>4</td><td>3</td><td>1</td><td>0</td><td>10</td><td>3</td><td>+7</td><td>10</td></tr>
+              <tr><td>5</td><td>PSG</td><td>4</td><td>3</td><td>0</td><td>1</td><td>14</td><td>5</td><td>+9</td><td>9</td></tr>
+              <tr><td>6</td><td>Newcastle</td><td>4</td><td>3</td><td>0</td><td>1</td><td>10</td><td>2</td><td>+8</td><td>9</td></tr>
+              <tr><td>7</td><td>Real Madrid</td><td>4</td><td>3</td><td>0</td><td>1</td><td>8</td><td>2</td><td>+6</td><td>9</td></tr>
+              <tr><td>8</td><td>Liverpool</td><td>4</td><td>3</td><td>0</td><td>1</td><td>9</td><td>4</td><td>+5</td><td>9</td></tr>
+              <tr><td>9</td><td>Galatasaray</td><td>4</td><td>3</td><td>0</td><td>1</td><td>8</td><td>6</td><td>+2</td><td>9</td></tr>
+              <tr><td>10</td><td>Tottenham</td><td>4</td><td>2</td><td>2</td><td>0</td><td>7</td><td>2</td><td>+5</td><td>8</td></tr>
+              <tr class="highlight"><td>11</td><td>FC Barcelona</td><td>4</td><td>2</td><td>1</td><td>1</td><td>12</td><td>7</td><td>+5</td><td>7</td></tr>
+              <tr><td>12</td><td>Chelsea</td><td>4</td><td>2</td><td>1</td><td>1</td><td>9</td><td>6</td><td>+3</td><td>7</td></tr>
+              <tr><td>13</td><td>Sporting Lisboa</td><td>4</td><td>2</td><td>1</td><td>1</td><td>8</td><td>5</td><td>+3</td><td>7</td></tr>
+              <tr><td>14</td><td>Dortmund</td><td>4</td><td>2</td><td>1</td><td>1</td><td>13</td><td>11</td><td>+2</td><td>7</td></tr>
+              <tr><td>15</td><td>Qarabağ</td><td>4</td><td>2</td><td>1</td><td>1</td><td>8</td><td>7</td><td>+1</td><td>7</td></tr>
+              <tr><td>16</td><td>Atalanta</td><td>4</td><td>2</td><td>1</td><td>1</td><td>3</td><td>5</td><td>-2</td><td>7</td></tr>
+              <tr><td>17</td><td>Atlético Madrid</td><td>4</td><td>2</td><td>0</td><td>2</td><td>10</td><td>9</td><td>+1</td><td>6</td></tr>
+              <tr><td>18</td><td>PSV</td><td>4</td><td>1</td><td>2</td><td>1</td><td>9</td><td>7</td><td>+2</td><td>5</td></tr>
+              <tr><td>19</td><td>Mónaco</td><td>4</td><td>1</td><td>2</td><td>1</td><td>4</td><td>6</td><td>-2</td><td>5</td></tr>
+              <tr><td>20</td><td>Pafos</td><td>4</td><td>1</td><td>2</td><td>1</td><td>2</td><td>5</td><td>-3</td><td>5</td></tr>
+              <tr><td>21</td><td>Leverkusen</td><td>4</td><td>1</td><td>2</td><td>1</td><td>6</td><td>10</td><td>-4</td><td>5</td></tr>
+              <tr><td>22</td><td>Club Brujas</td><td>4</td><td>1</td><td>1</td><td>2</td><td>8</td><td>10</td><td>-2</td><td>4</td></tr>
+              <tr><td>23</td><td>Frankfurt</td><td>4</td><td>1</td><td>1</td><td>2</td><td>7</td><td>11</td><td>-4</td><td>4</td></tr>
+              <tr><td>24</td><td>Napoli</td><td>4</td><td>1</td><td>1</td><td>2</td><td>4</td><td>9</td><td>-5</td><td>4</td></tr>
+              <tr><td>25</td><td>Marsella</td><td>4</td><td>1</td><td>0</td><td>3</td><td>6</td><td>5</td><td>+1</td><td>3</td></tr>
+            </tbody>
+          </table>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <footer class="calendario-style">
+    <div class="footer-line"></div>
+    <p>FC Barcelona © 2025 · Todos los derechos reservados</p>
+  </footer>
+
+  <!-- SCRIPTS -->
+  <script src="js/slider.js"></script>
+  <script>
+// ===== TABS =====
+document.querySelectorAll('.tab-button').forEach(button => {
+    button.addEventListener('click', () => {
+        const tabId = button.getAttribute('data-tab');
+        
+        document.querySelectorAll('.tab-button').forEach(btn => btn.classList.remove('active'));
+        document.querySelectorAll('.tab-content').forEach(content => content.classList.remove('active'));
+        
+        button.classList.add('active');
+        document.getElementById(tabId).classList.add('active');
+    });
+});
+
+// ===== MENÚ HAMBURGUESA =====
+const menuToggle = document.querySelector('.mobile-menu-toggle');
+const nav = document.querySelector('nav');
+const overlay = document.querySelector('.menu-overlay');
+
+if (menuToggle && nav && overlay) {
+    menuToggle.addEventListener('click', () => {
+        menuToggle.classList.toggle('active');
+        nav.classList.toggle('active');
+        overlay.classList.toggle('active');
+    });
+    
+    overlay.addEventListener('click', () => {
+        menuToggle.classList.remove('active');
+        nav.classList.remove('active');
+        overlay.classList.remove('active');
+    });
+}
+
+// ===== CALENDARIO INTERACTIVO =====
+
+const matches = [
+  // ===== OCTUBRE 2025 =====
+  {
+    date: '2025-10-01',
+    home: 'FC Barcelona',
+    away: 'Paris Saint-Germain',
+    competition: 'UEFA Champions League',
+    stadium: 'Estadi Olímpic Lluís Companys',
+    time: '21:00',
+    result: '1-2',
+    status: 'defeat'
+  },
+  {
+    date: '2025-10-05',
+    home: 'Sevilla',
+    away: 'FC Barcelona',
+    competition: 'La Liga',
+    stadium: 'Ramón Sánchez-Pizjuán',
+    time: '16:15',
+    result: '4-1',
+    status: 'defeat'
+  },
+  {
+    date: '2025-10-18',
+    home: 'FC Barcelona',
+    away: 'Girona',
+    competition: 'La Liga',
+    stadium: 'Estadi Olímpic Lluís Companys',
+    time: '16:15',
+    result: '2-1',
+    status: 'victory'
+  },
+  {
+    date: '2025-10-21',
+    home: 'FC Barcelona',
+    away: 'Olympiakos',
+    competition: 'UEFA Champions League',
+    stadium: 'Estadi Olímpic Lluís Companys',
+    time: '18:45',
+    result: '6-1',
+    status: 'victory'
+  },
+  {
+    date: '2025-10-26',
+    home: 'Real Madrid',
+    away: 'FC Barcelona',
+    competition: 'La Liga',
+    stadium: 'Santiago Bernabéu',
+    time: '16:15',
+    result: '2-1',
+    status: 'defeat'
+  },
+
+  // ===== NOVIEMBRE 2025 =====
+  {
+    date: '2025-11-02',
+    home: 'FC Barcelona',
+    away: 'Elche',
+    competition: 'La Liga',
+    stadium: 'Estadi Olímpic Lluís Companys',
+    time: '18:30',
+    result: '3-1',
+    status: 'victory'
+  },
+  {
+    date: '2025-11-05',
+    home: 'Club Brugge',
+    away: 'FC Barcelona',
+    competition: 'UEFA Champions League',
+    stadium: 'Jan Breydelstadion',
+    time: '21:00',
+    result: '3-3',
+    status: 'draw'
+  },
+  {
+    date: '2025-11-09',
+    home: 'Celta de Vigo',
+    away: 'FC Barcelona',
+    competition: 'La Liga',
+    stadium: 'Estadio Abanca-Balaídos',
+    time: '20:00',
+    result: '2-4',
+    status: 'victory'
+  },
+  {
+    date: '2025-11-22',
+    home: 'FC Barcelona',
+    away: 'Athletic Club',
+    competition: 'La Liga',
+    stadium: 'Spotify Camp Nou',
+    time: '16:15',
+    result: null,
+    status: 'upcoming'
+  },
+  {
+    date: '2025-11-25',
+    home: 'Chelsea',
+    away: 'FC Barcelona',
+    competition: 'UEFA Champions League',
+    stadium: 'Stamford Bridge',
+    time: '21:00',
+    result: null,
+    status: 'upcoming'
+  },
+  {
+    date: '2025-11-29',
+    home: 'FC Barcelona',
+    away: 'Alavés',
+    competition: 'La Liga',
+    stadium: 'Por confirmar (TBC)',
+    time: '16:15',
+    result: null,
+    status: 'upcoming'
+  },
+// ===== DICIEMBRE 2025 =====
+  {
+    date: '2025-12-02',
+    home: 'FC Barcelona',
+    away: 'Atlético Madrid',
+    competition: 'La Liga',
+    stadium: 'Por confirmar',
+    time: '21:00',
+    result: null,
+    status: 'upcoming'
+  },
+  {
+    date: '2025-12-06',
+    home: 'Real Betis',
+    away: 'FC Barcelona',
+    competition: 'La Liga',
+    stadium: 'Estadio La Cartuja de Sevilla',
+    time: '18:30',
+    result: null,
+    status: 'upcoming'
+  },
+  {
+    date: '2025-12-09',
+    home: 'FC Barcelona',
+    away: 'Eintracht Frankfurt',
+    competition: 'UEFA Champions League',
+    stadium: 'Spotify Camp Nou',
+    time: '21:00',
+    result: null,
+    status: 'upcoming'
+  },
+  {
+    date: '2025-12-13',
+    home: 'FC Barcelona',
+    away: 'Osasuna',
+    competition: 'La Liga',
+    stadium: 'Por confirmar',
+    time: '18:30',
+    result: null,
+    status: 'upcoming'
+  },
+  {
+    date: '2025-12-21',
+    home: 'Villarreal',
+    away: 'FC Barcelona',
+    competition: 'La Liga',
+    stadium: 'Estadio de la Cerámica',
+    time: 'Por confirmar',
+    result: null,
+    status: 'upcoming'
+  },
+
+  // ===== ENERO 2026 =====
+  {
+    date: '2026-01-04',
+    home: 'Espanyol',
+    away: 'FC Barcelona',
+    competition: 'La Liga',
+    stadium: 'Stage Front Stadium',
+    time: 'Por confirmar',
+    result: null,
+    status: 'upcoming'
+  },
+  {
+    date: '2026-01-07',
+    home: 'FC Barcelona',
+    away: 'Athletic Club',
+    competition: 'Supercopa de España (semifinal)',
+    stadium: 'Alinma Bank Stadium, King Abdullah Sport City',
+    time: '20:00',
+    result: null,
+    status: 'upcoming'
+  },
+  {
+    date: '2026-01-18',
+    home: 'Real Sociedad',
+    away: 'FC Barcelona',
+    competition: 'La Liga',
+    stadium: 'Estadio Municipal de Anoeta',
+    time: 'Por confirmar',
+    result: null,
+    status: 'upcoming'
+  },
+  {
+    date: '2026-01-21',
+    home: 'Slavia Prague',
+    away: 'FC Barcelona',
+    competition: 'UEFA Champions League',
+    stadium: 'Fortuna Arena',
+    time: '21:00',
+    result: null,
+    status: 'upcoming'
+  },
+  {
+    date: '2026-01-25',
+    home: 'FC Barcelona',
+    away: 'Real Oviedo',
+    competition: 'La Liga',
+    stadium: 'Por confirmar',
+    time: 'Por confirmar',
+    result: null,
+    status: 'upcoming'
+  },
+  {
+    date: '2026-01-28',
+    home: 'FC Barcelona',
+    away: 'FC København',
+    competition: 'UEFA Champions League',
+    stadium: 'Por confirmar',
+    time: '21:00',
+    result: null,
+    status: 'upcoming'
+  },
+
+  // ===== FEBRERO 2026 =====
+  {
+    date: '2026-02-01',
+    home: 'Elche',
+    away: 'FC Barcelona',
+    competition: 'La Liga',
+    stadium: 'Martínez Valero',
+    time: 'Por confirmar',
+    result: null,
+    status: 'upcoming'
+  },
+  {
+    date: '2026-02-08',
+    home: 'FC Barcelona',
+    away: 'Mallorca',
+    competition: 'La Liga',
+    stadium: 'Por confirmar',
+    time: 'Por confirmar',
+    result: null,
+    status: 'upcoming'
+  },
+  {
+    date: '2026-02-15',
+    home: 'Girona',
+    away: 'FC Barcelona',
+    competition: 'La Liga',
+    stadium: 'Municipal de Montilivi',
+    time: 'Por confirmar',
+    result: null,
+    status: 'upcoming'
+  },
+  {
+    date: '2026-02-22',
+    home: 'FC Barcelona',
+    away: 'Levante',
+    competition: 'La Liga',
+    stadium: 'Por confirmar',
+    time: 'Por confirmar',
+    result: null,
+    status: 'upcoming'
+  },
+
+  // ===== MARZO 2026 =====
+  {
+    date: '2026-03-01',
+    home: 'FC Barcelona',
+    away: 'Villarreal',
+    competition: 'La Liga',
+    stadium: 'Por confirmar',
+    time: 'Por confirmar',
+    result: null,
+    status: 'upcoming'
+  },
+  {
+    date: '2026-03-08',
+    home: 'Athletic Club',
+    away: 'FC Barcelona',
+    competition: 'La Liga',
+    stadium: 'San Mamés',
+    time: 'Por confirmar',
+    result: null,
+    status: 'upcoming'
+  },
+  {
+    date: '2026-03-15',
+    home: 'FC Barcelona',
+    away: 'Sevilla',
+    competition: 'La Liga',
+    stadium: 'Por confirmar',
+    time: 'Por confirmar',
+    result: null,
+    status: 'upcoming'
+  },
+  {
+    date: '2026-03-22',
+    home: 'FC Barcelona',
+    away: 'Rayo Vallecano',
+    competition: 'La Liga',
+    stadium: 'Por confirmar',
+    time: 'Por confirmar',
+    result: null,
+    status: 'upcoming'
+  }
+];
+
+const monthNames = [
+  'Enero','Febrero','Marzo','Abril','Mayo','Junio',
+  'Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre'
+];
+
+const dayNamesShort = ['L','M','X','J','V','S','D'];
+
+const calendarGrid = document.getElementById('calendarGrid');
+const monthLabel   = document.getElementById('monthLabel');
+const prevMonthBtn = document.getElementById('prevMonth');
+const nextMonthBtn = document.getElementById('nextMonth');
+const matchInfo    = document.getElementById('matchInfo');
+
+let currentDate = new Date();
+
+function renderCalendar(date) {
+  if (!calendarGrid) return;
+
+  calendarGrid.innerHTML = '';
+
+  const year  = date.getFullYear();
+  const month = date.getMonth();
+
+  if (monthLabel) {
+    monthLabel.textContent = `${monthNames[month]} ${year}`;
+  }
+
+  dayNamesShort.forEach(d => {
+    const headerCell = document.createElement('div');
+    headerCell.classList.add('calendar-day', 'header');
+    headerCell.textContent = d;
+    calendarGrid.appendChild(headerCell);
+  });
+
+  const firstDayOfMonth = new Date(year, month, 1);
+  const lastDayOfMonth  = new Date(year, month + 1, 0);
+
+  let startIndex = (firstDayOfMonth.getDay() + 6) % 7;
+
+  for (let i = 0; i < startIndex; i++) {
+    const emptyCell = document.createElement('div');
+    emptyCell.classList.add('calendar-day');
+    emptyCell.style.visibility = 'hidden';
+    calendarGrid.appendChild(emptyCell);
+  }
+
+  for (let day = 1; day <= lastDayOfMonth.getDate(); day++) {
+    const cell = document.createElement('div');
+    cell.classList.add('calendar-day');
+    cell.textContent = day;
+
+    const dateStr = `${year}-${String(month + 1).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
+
+    const dayMatches = matches.filter(m => m.date === dateStr);
+
+    if (dayMatches.length > 0) {
+      cell.classList.add('match-day');
+      cell.addEventListener('click', () => mostrarPartidos(dayMatches, dateStr));
+    } else {
+      cell.addEventListener('click', () => mostrarSinPartido(dateStr));
+    }
+
+    calendarGrid.appendChild(cell);
+  }
+}
+
+function mostrarPartidos(dayMatches, dateStr) {
+  if (!matchInfo) return;
+
+  let html = `
+    <h3 class="subtitle">Detalles del partido</h3>
+    <p>Fecha: ${formatearFecha(dateStr)}</p>
+  `;
+
+  dayMatches.forEach(match => {
+    const indicatorClass =
+      match.status === 'victory' ? 'win' :
+      match.status === 'defeat'  ? 'loss' :
+      match.status === 'draw'    ? 'draw' :
+      '';
+
+    const statusText =
+      match.status === 'victory' ? 'Victoria' :
+      match.status === 'defeat'  ? 'Derrota' :
+      match.status === 'draw'    ? 'Empate' :
+      'Próximo partido';
+
+    html += `
+      <hr style="margin: 1rem 0; border: none; border-top: 1px solid rgba(255,255,255,0.2);">
+      <p>
+        <span class="result-indicator ${indicatorClass}"></span>
+        <strong>${statusText}</strong> · ${match.competition}
+      </p>
+      <p><strong>${match.home}</strong> vs <strong>${match.away}</strong></p>
+      <p>Estadio: ${match.stadium}</p>
+      <p>Hora: ${match.time}</p>
+      ${
+        match.result
+          ? `<p>Marcador final: <strong>${match.result}</strong></p>`
+          : `<p>Marcador final: <em>Por jugar</em></p>`
+      }
+    `;
+  });
+
+  matchInfo.innerHTML = html;
+  matchInfo.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+function mostrarSinPartido(dateStr) {
+  if (!matchInfo) return;
+
+  matchInfo.innerHTML = `
+    <h3 class="subtitle">Detalles del partido</h3>
+    <p>Fecha: ${formatearFecha(dateStr)}</p>
+    <p>No hay partido programado para este día.</p>
+  `;
+
+  matchInfo.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+function formatearFecha(dateStr) {
+  const [year, month, day] = dateStr.split('-').map(Number);
+  return `${day}/${String(month).padStart(2, '0')}/${year}`;
+}
+
+if (prevMonthBtn && nextMonthBtn) {
+  prevMonthBtn.addEventListener('click', () => {
+    currentDate = new Date(currentDate.getFullYear(), currentDate.getMonth() - 1, 1);
+    renderCalendar(currentDate);
+  });
+
+  nextMonthBtn.addEventListener('click', () => {
+    currentDate = new Date(currentDate.getFullYear(), currentDate.getMonth() + 1, 1);
+    renderCalendar(currentDate);
+  });
+}
+
+if (calendarGrid) {
+  renderCalendar(currentDate);
+}
+  </script>
+
+</body>
+</html>

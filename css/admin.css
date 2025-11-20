@@ -1,0 +1,165 @@
+.admin-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    min-height: 80vh;
+}
+
+.admin-section {
+    background: linear-gradient(135deg, var(--barca-blue) 0%, var(--barca-dark-blue) 100%);
+    padding: 2rem;
+    margin: 1.5rem 0;
+    border-radius: 15px;
+    border: 3px solid var(--barca-yellow);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.admin-section h2 {
+    color: var(--barca-yellow);
+    border-bottom: 2px solid var(--barca-red);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.form-group {
+    margin: 1.2rem 0;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--barca-yellow);
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    border: 2px solid var(--barca-yellow);
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--barca-red);
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.btn {
+    background: linear-gradient(135deg, var(--barca-red) 0%, #8B0000 100%);
+    color: white;
+    border: none;
+    padding: 0.8rem 1.8rem;
+    border-radius: 8px;
+    cursor: pointer;
+    margin: 0.5rem;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.btn:hover {
+    background: linear-gradient(135deg, var(--barca-yellow) 0%, #FFD700 100%);
+    color: var(--barca-blue);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(237, 187, 0, 0.4);
+}
+
+.btn-secondary {
+    background: linear-gradient(135deg, var(--barca-blue) 0%, #003d82 100%);
+}
+
+.btn-secondary:hover {
+    background: linear-gradient(135deg, #0066CC 0%, #004D98 100%);
+}
+
+.hidden {
+    display: none !important;
+}
+
+.players-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.player-card {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 1rem;
+    border-radius: 8px;
+    border: 1px solid var(--barca-yellow);
+}
+
+.player-card h4 {
+    color: var(--barca-yellow);
+    margin: 0 0 0.5rem 0;
+}
+
+.player-card p {
+    margin: 0.2rem 0;
+    color: white;
+}
+
+.status-message {
+    padding: 1rem;
+    margin: 1rem 0;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.status-success {
+    background: rgba(0, 255, 0, 0.1);
+    border: 1px solid #00FF00;
+    color: #00FF00;
+}
+
+.status-error {
+    background: rgba(255, 0, 0, 0.1);
+    border: 1px solid #FF0000;
+    color: #FF0000;
+}
+
+/* Responsive para admin */
+@media (max-width: 768px) {
+    .admin-container {
+        padding: 1rem;
+    }
+    
+    .admin-section {
+        padding: 1.5rem;
+    }
+    
+    .players-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .btn {
+        width: 100%;
+        margin: 0.5rem 0;
+    }
+}
+
+.btn[style*="background: var(--barca-blue)"] {
+    background: linear-gradient(135deg, var(--barca-blue) 0%, #003d82 100%) !important;
+    border: 2px solid var(--barca-yellow);
+    transition: all 0.3s ease;
+}
+
+.btn[style*="background: var(--barca-blue)"]:hover {
+    background: linear-gradient(135deg, var(--barca-yellow) 0%, #FFD700 100%) !important;
+    color: var(--barca-blue);
+    transform: translateY(-2px);
+}

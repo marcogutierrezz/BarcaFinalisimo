@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Noticias - FC Barcelona</title>
+	<link rel="stylesheet" href="css/general.css">
+    <link rel="stylesheet" href="css/mobile.css">
+
+	<style>
+		#historia-hero p { font-size: 1.15rem; line-height: 1.6; color: var(--light-gray); }
+		.timeline { display: grid; gap: 1rem; }
+		.valor-list { display: grid; gap: 0.6rem; }
+	</style>
+</head>
+<body>
+<div id="superior">
+	<div id="encabezado">
+		<div id="logo">
+			<h1>FC Barcelona</h1>
+		</div>
+
+		<button class="mobile-menu-toggle" aria-label="Menú">
+			<span></span>
+			<span></span>
+			<span></span>
+		</button>
+        
+		<nav>
+			<ul>
+				<li><a href="index.html" id="inicio">Inicio</a></li>
+				<li><a href="noticias.html" id="noticias">Noticias</a></li>
+				<li><a href="plantilla.html" id="plantilla">Plantilla</a></li>
+				<li><a href="calendario.html" id="calendario">Calendario</a></li>
+				<li><a href="historia.html" id="historia">Historia</a></li>
+			</ul>
+		</nav>
+        
+		<div id="imgDesc" class="noticias-style">
+			<div id="description" class="" style="margin-top:1.5rem;">
+				<p>Aquí encontrarás toda la información actualizada del mundo culé: Últimos partidos, fichajes, lesiones, análisis tácticos y las declaraciones más relevantes. Mantente al día con la actualidad azulgrana y no te pierdas ningún detalle de tu equipo favorito. ¡Visça el Barça!</p>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="principal">
+	<section id="contenido">
+		<div id="galeria">
+			<h2 class="categoria-titulo">Ultimas noticias del FC Barcelona</h2>
+
+			<div class="hist-grid">
+			<!-- Lesion Yamal -->
+			<div class="plan hist-section hist-left">
+				<div class="hist-block-image">
+					<img src="img/Lesion_Yamal.webp" alt="Lesion_Yamal">
+				</div>
+				<h3 style="color:var(--barca-yellow);">Yamal fuera por 3 a 4 semanas</h3>
+				<div id="historia-hero">
+					<p><strong>Actualizado:</strong> 03/10/2025 - 15:58CES.</p>
+					<p>Lamine Yamal sufre una lesión en el bíceps femoral de la pierna derecha durante el Clásico ante el Real Madrid. El joven talento culé se vio obligado a abandonar el terreno de juego en el minuto 68. 
+						Según los servicios médicos del club, el futbolista estará aproximadamente 3-4 semanas de baja. Se perderá encuentros clave como el derbi ante el Espanyol, la visita al Villarreal y al menos dos partidos de la fase de grupos de Champions League. Su regreso está previsto para finales de noviembre.</p>
+				</div>
+			</div>
+
+		<!-- El tiburon -->
+			<div class="plan hist-section hist-left">
+				<div class="hist-block-image">
+					<img src="img/Noticia_ferran.png" alt="El_Tiburon">
+				</div>
+				<h3 style="color:var(--barca-yellow);">El tiburon acecha el campo </h3>
+				<div id="historia-hero">
+					<p><strong>Actualizado:</strong> 03/10/2025 - 11:09CEST</p>
+					<p>Ferran Torres vive su mejor momento desde que llegó al Barcelona, consolidándose como delantero titular y firmando su mejor arranque de temporada con 5 goles en 9 partidos. El atacante ha marcado ante Mallorca, Levante, PSG y un doblete ante el Getafe, liderando actualmente la clasificación del Zarra en LaLiga. 
+						Su mejora no es solo goleadora, sino también en sacrificio y juego sin balón, demostrado en su gran actuación contra el PSG. Después de superar etapas de suplencia y rumores de salida, el Tiburón se ha convertido en el máximo goleador culé de la temporada.</p>
+				</div>
+			</div>
+
+		<!-- Frenazo PSG -->
+			<div class="plan hist-section hist-left">
+				<div class="hist-block-image">
+					<img src="img/barxa_psg.png" alt="Barca_psg">
+				</div>
+				<h3 style="color:var(--barca-yellow);">Triste derrota </h3>
+				<div id="historia-hero">
+					<p><strong>Actualizado:</strong> 02/10/2025 - 06:02CEST</p>
+					<p>El Barcelona sufrió una dura derrota ante el PSG (1-2) en un partido donde el equipo francés demostró superioridad física y táctica. A pesar del gol inicial de Ferran Torres, el PSG se rehízo con efectividad mientras el Barça mostró fatiga en la segunda parte, con Pedri y Lamine Yamal evidenciando problemas físicos.
+						Los cambios de Luis Enrique fueron clave, mientras que los de Flick aportaron poco. Esta derrota frena el optimismo culé y muestra que el equipo todavía tiene margen de mejora para aspirar al título de Champions.</p>
+				</div>
+			</div>
+
+			</div> 
+			<div style="grid-column:1 / -1; text-align:center; color:var(--light-gray); max-width:900px; margin:1.5rem auto;">
+				<p>Las Noticias del FC Barcelona siguen redactandose dia con dia sigue nuestras redes para mantenerte al tanto.</p>
+			</div>
+
+		</div>
+	</section>
+</div>
+
+<footer>
+	<p>FC Barcelona &copy; 2025 - Todos los derechos reservados</p>
+</footer>
+
+<div class="menu-overlay"></div>
+
+<script>
+const menuToggle = document.querySelector('.mobile-menu-toggle');
+const nav = document.querySelector('#encabezado > nav');
+const overlay = document.querySelector('.menu-overlay');
+
+if (menuToggle && nav) {
+	menuToggle.addEventListener('click', () => {
+		menuToggle.classList.toggle('active');
+		nav.classList.toggle('active');
+		overlay.classList.toggle('active');
+	});
+	
+	overlay.addEventListener('click', () => {
+		menuToggle.classList.remove('active');
+		nav.classList.remove('active');
+		overlay.classList.remove('active');
+	});
+
+	nav.querySelectorAll('a').forEach(link => {
+		link.addEventListener('click', () => {
+			menuToggle.classList.remove('active');
+			nav.classList.remove('active');
+			overlay.classList.remove('active');
+		});
+	});
+}
+</script>
+
+</body>
+</html>
